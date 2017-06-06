@@ -20,7 +20,7 @@
   
 * Fix Strange quotation marks in `lockfile.rb`  
   [Dacaiguoguo](https://github.com/dacaiguoguogmail)
-  [#377](https://github.com/CocoaPods/Core/pull/377) 
+  [#381](https://github.com/CocoaPods/Core/pull/381) 
 
 ## 1.2.1 (2017-04-11)
 
