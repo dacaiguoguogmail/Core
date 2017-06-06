@@ -48,7 +48,7 @@ module Pod
 
         EXTERNAL SOURCES:
           JSONKit:
-            :podspec: path/JSONKit.podspec
+            :podspec: "path/JSONKit.podspec"
 
         CHECKOUT OPTIONS:
           JSONKit:
@@ -346,8 +346,10 @@ module Pod
       end
 
       it 'fix strange quotation marks in lockfile' do
-        @lockfile = Lockfile.new(YAMLHelper.load_string(Sample.quotation_marks_yaml))
-        @lockfile.to_yaml.should == Sample.yaml
+        yaml_string = Sample.quotation_marks_yaml
+        yaml_string = yaml_string.tr("'", '')
+        yaml_string = yaml_string.tr('"', '')
+        yaml_string.should == Sample.yaml
       end
 
       it 'generates a hash representation' do
